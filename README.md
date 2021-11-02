@@ -31,3 +31,28 @@ O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a g
 - Firebase 
 > Versão 9.2.0
 
+
+# Rodando o back-end
+
+1. Crie uma venv e instale os requisitos fora do repositorio:
+
+```sh
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+2. Rode as migrações do django:
+
+```sh
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+3. Roda o projeto ou executa os testes:
+
+```sh
+python3 manage.py runserver
+```
+
+
