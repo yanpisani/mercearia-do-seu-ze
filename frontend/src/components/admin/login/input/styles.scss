@@ -1,1 +1,11 @@
 @import 'src/resources/styles';
+
+.input-login-div {
+  width: 100%;
+  height: 100%;
+  font-family: $f_MontB;
+  .input-login {
+    height: 50px;
+    font-family: $f_MontR
+  }
+}
