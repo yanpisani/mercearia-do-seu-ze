@@ -27,9 +27,25 @@ O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a g
 - PostgreSQL
 > Versão 14.0
 
-# Servidor:
-- Firebase 
-> Versão 9.2.0
+# Rodando o front-end
+
+1. Garanta que você está na pasta front-end:
+
+```sh
+cd ./frontend
+```
+
+2. Instale as depedências do javascript:
+
+```sh
+npm install
+```
+
+3. Rode o projeto:
+
+```sh
+npm start
+```
 
 
 # Rodando o back-end
