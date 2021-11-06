@@ -1,5 +1,11 @@
 @import 'src/resources/styles';
 
 .login {
-  background-color: $c_Orange;
+  width: 100vw;
+  height: 100vh;
+  background-color: $c_White;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import './styles.scss'
+import './styles.scss';
+
+import Modal from "./modal";
 
 export default class Login extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
     render() {
         return(
-            <div className={`teste`}>teste2</div>
+            <div className={`login`}>
+                <Modal />
+            </div>
         )
     }
 }
