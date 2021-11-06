@@ -1,0 +1,12 @@
+@import 'resources/styles';
+
+
+.app {
+  font-family: $f_MontR;
+  height: 100vh;
+  width: 100vw;
+  background-color: $c_White;
+  color: $c_Black;
+
+  display: flex;
+}
