@@ -1,7 +1,7 @@
 # Mercearia do Seu Zé
 ###### Repositório para Confeccão de Trabalho Final Prático para a Aula de Engenharia de Software
 
-O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a gerencia do mercadinho do seu Zé, oferecendo informações importantes como estoque da loja, numero de funcionários, numero de faltas, clientes e fidelidade.
+O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a gerencia do mercadinho do seu Zé, oferecendo informações importantes como estoque da loja e gerenciamento de funcionários. Além disso, possui também ferramentas para auxiliar seus funcionários com o estoque da mercearia.
 
 # Linguagens:
 #### Frontend:
