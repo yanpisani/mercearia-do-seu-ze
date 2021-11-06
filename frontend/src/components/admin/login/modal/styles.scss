@@ -1,0 +1,13 @@
+@import 'src/resources/styles';
+
+.modal-login {
+  width: 500px;
+  height: 600px;
+  background-color: $c_White;
+  box-shadow: $s_Shadow;
+  border-radius: $s_Radius;
+}
+
+.label-input {
+  font-family: $f_MontB !important;
+}
