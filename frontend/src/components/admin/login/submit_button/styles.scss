@@ -1,1 +1,13 @@
 @import 'src/resources/styles';
+
+.submit-button-div {
+  .submit-button {
+    width: 130px;
+    height: 50px;
+    font-family: $f_MontB;
+    color: $c_White;
+    background-color: $c_Orange;
+    border-radius: 100px;
+    border: none;
+  }
+}
