@@ -1,0 +1,20 @@
+@import 'src/resources/styles';
+
+.card-home {
+    background-color: $c_White;
+
+    .card-title {
+        color: $c_Black;
+        font-size: 30px;
+    }
+    .icon {
+        font-size: 100px;
+        color: $c_Black;
+    }
+    .card-button {
+        background-color: $c_LightOrange;
+        color: $c_White;
+        height: 70px;
+        font-size: 20px;
+    }
+}
