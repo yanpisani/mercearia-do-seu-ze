@@ -55,7 +55,8 @@ npm start
 ```sh
 python3 -m venv venv
 source venv/bin/activate
-pip3 install -r requirements.txt
+pip3 install django
+pip3 install djangorestframework
 ```
 
 2. Rode as migrações do django:
