@@ -2,11 +2,11 @@
 
 .submit-button-div {
   .submit-button {
-    width: 130px;
+    min-width: 150px;
     height: 50px;
     font-family: $f_MontB;
     color: $c_White;
-    background-color: $c_Orange;
+    background-color: $c_LightOrange;
     border-radius: 100px;
     border: none;
   }

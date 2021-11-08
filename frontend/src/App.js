@@ -1,16 +1,12 @@
 import React from "react";
-import "./App.scss";
-import { Routes, Route } from "react-router-dom";
+import Routes from "./routes/";
 
-import Login from './components/admin/login'
+import "./App.scss";
 
 export default function App() {
   return (
-      <div className={`app`}>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/entrar' element={<Login />} />
-        </Routes>
-      </div>
+    <div className={`app`}>
+      <Routes />
+    </div>
   );
 }

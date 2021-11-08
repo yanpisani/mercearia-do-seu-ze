@@ -6,6 +6,9 @@
   font-family: $f_MontB;
   .input-login {
     height: 50px;
+    border: none;
+    box-shadow: $s_Shadow;
+    padding-left: 5px;
     font-family: $f_MontR
   }
 }

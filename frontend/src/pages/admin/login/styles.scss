@@ -1,0 +1,31 @@
+@import "src/resources/styles";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: $c_White;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-login {
+    width: 500px;
+    height: 600px;
+    background-color: $c_White;
+    box-shadow: $s_Shadow;
+    border-radius: $s_Radius;
+  }
+
+  .label-input {
+    font-family: $f_MontB !important;
+  }
+  a {
+    color: $c_Black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline $c_Black;
+    }
+  }
+}
