@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     #project apps
     'accounts',
+    'inventory',
 ]
 
 MIDDLEWARE = [

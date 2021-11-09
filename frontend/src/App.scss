@@ -1,5 +1,4 @@
-@import 'resources/styles';
-
+@import "resources/styles";
 
 .app {
   font-family: $f_MontR;
@@ -7,6 +6,4 @@
   width: 100vw;
   background-color: $c_White;
   color: $c_Black;
-
-  display: flex;
 }
