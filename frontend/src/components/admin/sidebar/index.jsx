@@ -3,43 +3,75 @@ import "./styles.scss";
 
 import Logo from "../../../assets/images/logo.png";
 
+const ListSidebar = [
+    {
+        title: 'Início',
+        icon: 'ri-home-3-line',
+        redirect: '/admin/inicio',
+    },
+    {
+        title: 'Funcionários',
+        icon: 'ri-booklet-line',
+        redirect: '/admin/funcionarios',
+    },
+    {
+        title: 'Estoque',
+        icon: 'ri-archive-line',
+        redirect: '/admin/estoque',
+    },
+    {
+        title: 'Vendas',
+        icon: 'ri-shopping-cart-line',
+        redirect: '/admin/vendas',
+    }
+]
+
 export default function Sidebar(){
     return(
-        <div className={`Sidebar`}>
+        <aside className={`Sidebar`}>
             <div className={`container container-sidebar`}>
                 <div className={`row`}>
                     <div className={`col`}>
-                        <img src={Logo} class="img-fluid my-4" alt="Mercearia do Seu Zé"></img>
+                        <img src={Logo} className={`img-fluid my-4`} alt="Mercearia do Seu Zé" />
                     </div>
                 </div>
-
-                <div className={`row`}>
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto sidebar-btn">home</button>
-                        </div>
+                <div className={`row mb-4`}>
+                    <div className={`col`}>
+                        <a href={`/admin/perfil`}>
+                            <ul>
+                                <li>
+                                    <span className={`ri-user-line`} />
+                                    <span className={`perfil`}>Meu Perfil</span>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
-
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto sidebar-btn">func</button>
-                        </div>
-                    </div> 
-
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto sidebar-btn">stoc</button>
-                        </div>
-                    </div> 
                 </div>
+                <ul>
+                    {
+                        ListSidebar.map((item, index) => {
+                            return (
+                                <a href={item.redirect}>
+                                    <li key={index.toString()} >
+                                       <span className={item.icon} />
+                                       <span className={`sidebar-title`}>{item.title}</span>
+                                    </li>
+                                </a>
+                            )
+                        })
+                    }
+                </ul>
 
-                <div className={`row`}>
-                        <div className={`col`}>
-                            <button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto quit-btn">bye</button>
-                        </div>
-                </div> 
+                <a href={`/entrar`}>
+                    <ul>
+                        <li>
+                            <span className={`ri-arrow-left-line`} />
+                            <span className={`back`}>Sair</span>
+                        </li>
+                    </ul>
+                </a>
             </div>
-        </div>
-    )   
+        </aside>
+    )
 }
 

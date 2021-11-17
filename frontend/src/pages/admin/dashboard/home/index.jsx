@@ -14,13 +14,9 @@ export default function Home() {
         <div className={`admin-home`}>
             <div className={`admin-card`}>
                 {
-                    Cards.map((card, i) => {
+                    Cards.map((card, index) => {
                         return (
-                            <div className={`teste`}>
-                                <div className={`testee`}>
-                                    <Card section={card.section} to={card.link} />
-                                </div>
-                            </div>
+                            <Card key={index.toString()} section={card.section} to={card.link} />
                         )
                     })
                 }
