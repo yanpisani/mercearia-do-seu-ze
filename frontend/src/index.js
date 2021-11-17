@@ -5,10 +5,11 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "remixicon/fonts/remixicon.css";
 
 import App from "./App";
+import history from "./services/history";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter history={history}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
