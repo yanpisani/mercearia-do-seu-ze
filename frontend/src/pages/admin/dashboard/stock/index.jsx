@@ -11,7 +11,10 @@ export default function Stock() {
   const [loading, setLoading] = useState(true);
   const [posting, setPosting] = useState(false);
 
-  //post
+  const [isEditing, setIsEditing] = useState(false);
+  const [editId, setEditId] = useState();
+
+  //data
   const [name, setName] = useState();
   const [brand, setBrand] = useState();
   const [batch, setBatch] = useState();
@@ -60,8 +63,40 @@ export default function Stock() {
   }
 
   async function deleteProductById(id) {
+    setLoading(true);
     await apiProduct.deleteProduct(id);
     getProducts();
+    setLoading(false);
+  }
+
+  async function putProduct() {
+    setLoading(true);
+    let data = {
+      name: name,
+      brand: brand,
+      batch: batch,
+      quantity: quantity,
+      bar_code: barCode,
+      cost_value: costValue,
+      sale_value: saleValue,
+    };
+    await apiProduct.putProduct(editId, data);
+    setEditId(null);
+    setIsEditing(false);
+    setLoading(false);
+  }
+
+  async function toggleEditing(id) {
+    setIsEditing(true);
+    setEditId(id);
+    let res = await apiProduct.getProductById(id);
+    setName(res.name);
+    setBrand(res.brand);
+    setBatch(res.batch);
+    setQuantity(res.quantity);
+    setBarCode(res.bar_code);
+    setCostValue(res.cost_value);
+    setSaleValue(res.sale_value);
   }
 
   return (
@@ -93,9 +128,10 @@ export default function Stock() {
               data: productData,
             }}
             deleteFunction={deleteProductById}
+            editFunction={toggleEditing}
           />
         )}
-        {posting && (
+        {(posting || isEditing) && (
           <div>
             <br />
             <br />
@@ -111,6 +147,7 @@ export default function Stock() {
                   onChange={(event) => {
                     setName(event.target.value);
                   }}
+                  value={name}
                 ></input>
               </div>
               <div className="input-posting">
@@ -120,6 +157,7 @@ export default function Stock() {
                   onChange={(event) => {
                     setBrand(event.target.value);
                   }}
+                  value={brand}
                 ></input>
               </div>
               <div className="input-posting">
@@ -129,6 +167,7 @@ export default function Stock() {
                   onChange={(event) => {
                     setBatch(event.target.value);
                   }}
+                  value={batch}
                 ></input>
               </div>
               <div className="input-posting">
@@ -138,6 +177,7 @@ export default function Stock() {
                   onChange={(event) => {
                     setQuantity(event.target.value);
                   }}
+                  value={quantity}
                 ></input>
               </div>
               <div className="input-posting">
@@ -147,6 +187,7 @@ export default function Stock() {
                   onChange={(event) => {
                     setBarCode(event.target.value);
                   }}
+                  value={barCode}
                 ></input>
               </div>
               <div className="input-posting">
@@ -154,8 +195,9 @@ export default function Stock() {
                 <input
                   placeholder="Valor custo"
                   onChange={(event) => {
-                    setSaleValue(event.target.value);
+                    setCostValue(event.target.value);
                   }}
+                  value={costValue}
                 ></input>
               </div>
               <div className="input-posting">
@@ -163,11 +205,18 @@ export default function Stock() {
                 <input
                   placeholder="Preço de venda"
                   onChange={(event) => {
-                    setCostValue(event.target.value);
+                    setSaleValue(event.target.value);
                   }}
+                  value={saleValue}
                 ></input>
               </div>
-              <button type="submit" onClick={postProduct}>
+              <button
+                type="submit"
+                onClick={() => {
+                  if (!isEditing) postProduct();
+                  else putProduct();
+                }}
+              >
                 Adicionar
               </button>
             </form>

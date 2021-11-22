@@ -6,6 +6,11 @@ class ApiPrroducts extends Api {
     return res.json();
   }
 
+  async getProductById(id) {
+    const res = await this.get('product/' + id + '/');
+    return res.json();
+  }
+
   async putProduct(id_param, data_param) {
     const res = await this.put(
       `product/${id_param}/`,
