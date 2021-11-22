@@ -5,7 +5,7 @@ import Input from "../../../components/admin/input";
 import SubmitButton from "../../../components/admin/submit_button";
 import Logo from "../../../assets/images/logo.png";
 
-export default function Modal_login (){
+export default function Login (){
     return(
         <div className={`login`}>
             <div className={`modal-login container d-flex justify-content-around flex-column `}>
@@ -33,7 +33,7 @@ export default function Modal_login (){
                     </div>
                     <div className={`row mt-5`}>
                         <div className={`col d-flex justify-content-center align-items-center`}>
-                            <SubmitButton type={`submit`} content={`ENTRAR`} />
+                            <SubmitButton type={`submit`} content={`ENTRAR`} linkTo={'/admin/inicio'}/>
                         </div>
                     </div>
                 </form>
