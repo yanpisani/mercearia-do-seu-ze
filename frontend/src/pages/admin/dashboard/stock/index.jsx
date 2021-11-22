@@ -9,13 +9,23 @@ export default function Stock() {
     data: [],
   });
   const [loading, setLoading] = useState(true);
+  const [posting, setPosting] = useState(false);
+
+  //post
+  const [name, setName] = useState();
+  const [brand, setBrand] = useState();
+  const [batch, setBatch] = useState();
+  const [quantity, setQuantity] = useState();
+  const [barCode, setBarCode] = useState();
+  const [costValue, setCostValue] = useState();
+  const [saleValue, setSaleValue] = useState();
 
   useEffect(() => {
-    setLoading(true);
     getProducts();
   }, []);
 
   async function getProducts() {
+    setLoading(true);
     const res = await apiProduct.getProducts();
     let auxData = [];
 
@@ -31,12 +41,38 @@ export default function Stock() {
     setLoading(false);
   }
 
+  async function postProduct() {
+    setLoading(true);
+    let data = {
+      name: name,
+      brand: brand,
+      batch: batch,
+      quantity: quantity,
+      bar_code: barCode,
+      cost_value: costValue,
+      sale_value: saleValue,
+    };
+
+    await apiProduct.postProduct(data);
+    getProducts();
+    setLoading(false);
+  }
+
   return (
     <div className="all-inventory">
       <div className="content-flex">
-        <h2>
-          <b>Estoque</b>
-        </h2>
+        <div className="flex">
+          <h2>
+            <b>Estoque</b>
+          </h2>
+          <button
+            onClick={() => {
+              setPosting(!posting);
+            }}
+          >
+            <b>+ Produto</b>
+          </button>
+        </div>
         <br />
         {!loading && (
           <TableComponent
@@ -45,6 +81,84 @@ export default function Stock() {
               data: productData,
             }}
           />
+        )}
+        {posting && (
+          <div>
+            <br />
+            <br />
+            <h3>
+              <b>Adicionar Produto</b>
+            </h3>
+            <br />
+            <form>
+              <div className="input-posting">
+                <label>Nome:</label>
+                <input
+                  placeholder="Nome"
+                  onChange={(event) => {
+                    setName(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Marca:</label>
+                <input
+                  placeholder="Marca"
+                  onChange={(event) => {
+                    setBrand(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Lote:</label>
+                <input
+                  placeholder="Lote"
+                  onChange={(event) => {
+                    setBatch(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Unidades:</label>
+                <input
+                  placeholder="Unidades"
+                  onChange={(event) => {
+                    setQuantity(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Código de Barras:</label>
+                <input
+                  placeholder="Código de barras"
+                  onChange={(event) => {
+                    setBarCode(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Valor Custo:</label>
+                <input
+                  placeholder="Valor custo"
+                  onChange={(event) => {
+                    setSaleValue(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-posting">
+                <label>Preço de venda:</label>
+                <input
+                  placeholder="Preço de venda"
+                  onChange={(event) => {
+                    setCostValue(event.target.value);
+                  }}
+                ></input>
+              </div>
+              <button type="submit" onClick={postProduct}>
+                Adicionar
+              </button>
+            </form>
+          </div>
         )}
       </div>
     </div>
