@@ -31,6 +31,7 @@ export default function Stock() {
 
     for (let i = 0; i < res.length; i++) {
       auxData[i] = [
+        res[i].id,
         res[i].name,
         res[i].quantity,
         res[i].cost_value,
@@ -58,6 +59,11 @@ export default function Stock() {
     setLoading(false);
   }
 
+  async function deleteProductById(id) {
+    await apiProduct.deleteProduct(id);
+    getProducts();
+  }
+
   return (
     <div className="all-inventory">
       <div className="content-flex">
@@ -77,9 +83,16 @@ export default function Stock() {
         {!loading && (
           <TableComponent
             data={{
-              header: ['Produto', 'Unidades', 'Valor Custo', 'Valor Venda'],
+              header: [
+                'id',
+                'Produto',
+                'Unidades',
+                'Valor Custo',
+                'Valor Venda',
+              ],
               data: productData,
             }}
+            deleteFunction={deleteProductById}
           />
         )}
         {posting && (
