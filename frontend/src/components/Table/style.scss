@@ -1,0 +1,30 @@
+.all-table table {
+  width: 100%;
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 5px;
+}
+
+.all-table th,
+.all-table td {
+  padding: 15px;
+}
+
+.all-table th {
+  size: 18px;
+  color: #f6f6f6;
+  background-color: #ff572b;
+}
+
+.all-table td {
+  border-bottom: 1px solid #00000010;
+}
+
+.all-table .icons {
+  width: 10%;
+}
+
+.all-table img {
+  padding-right: 10px;
+  width: 40px;
+  cursor: pointer;
+}
