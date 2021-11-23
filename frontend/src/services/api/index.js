@@ -1,4 +1,4 @@
-import userService from '../userService';
+// import userService from '../userService';
 export default class Api {
   constructor() {
     this.baseUrl = 'http://127.0.0.1:8000/';

@@ -11,3 +11,15 @@
 .all-inventory h2 {
   font-size: 50px;
 }
+
+.all-inventory .flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.all-inventory .input-posting {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}

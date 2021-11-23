@@ -24,8 +24,18 @@ export default function TableComponent(props) {
                     return <td>{item}</td>;
                   })}
                   <td className="icons">
-                    <img src={eye} />
-                    <img src={trash} />
+                    <img
+                      onClick={() => {
+                        props.editFunction(row[0]);
+                      }}
+                      src={eye}
+                    />
+                    <img
+                      onClick={() => {
+                        props.deleteFunction(row[0]);
+                      }}
+                      src={trash}
+                    />
                   </td>
                 </tr>
               );
