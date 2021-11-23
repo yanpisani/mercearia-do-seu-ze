@@ -3,7 +3,12 @@ import Api from './index';
 class ApiUsers extends Api {
   async getUsers() {
     const res = await this.get('users/');
-    res.json();
+    return res.json();
+  }
+
+  async getUsersById(id) {
+    const res = await this.get('users/' + id + '/');
+    return res.json();
   }
 
   async putUser(id_param, data_param) {
@@ -20,7 +25,7 @@ class ApiUsers extends Api {
   }
 
   async deleteUser(id_param) {
-    const res = await this.delete(`user/${id_param}`);
+    const res = await this.delete(`users/${id_param}/`);
     return res;
   }
 }

@@ -1,0 +1,25 @@
+.all-employees {
+  display: flex;
+  justify-content: center;
+}
+
+.all-employees .content-flex {
+  width: 90%;
+  padding-top: 4%;
+}
+
+.all-employees h2 {
+  font-size: 50px;
+}
+
+.all-employees .flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.all-employees .input-posting {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
