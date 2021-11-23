@@ -12,10 +12,17 @@ export default function Home() {
       section: 'Estoque',
       link: '/admin/estoque',
     },
+    {
+      section: 'Vendas',
+      link: '/admin/sales',
+    },
   ];
 
   return (
     <div className={`admin-home`}>
+      <h1>
+        <b>Área do Gerente/administrador</b>
+      </h1>
       <div className={`admin-card`}>
         {Cards.map((card, index) => {
           return (
