@@ -220,6 +220,8 @@ export default function Stock() {
                 Adicionar
               </button>
             </form>
+            <br />
+            <br />
           </div>
         )}
       </div>

@@ -1,32 +1,32 @@
 @import 'src/resources/styles';
 
-.all-inventory {
+.all-employees {
   display: flex;
   justify-content: center;
 }
 
-.all-inventory .content-flex {
+.all-employees .content-flex {
   width: 90%;
   padding-top: 4%;
 }
 
-.all-inventory h2 {
+.all-employees h2 {
   font-size: 50px;
 }
 
-.all-inventory .flex {
+.all-employees .flex {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.all-inventory .input-posting {
+.all-employees .input-posting {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
 }
 
-.all-inventory button {
+.all-employees button {
   background-color: $c_LightOrange; /* Green */
   border: none;
   color: white;
@@ -35,5 +35,5 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: px;
+  border-radius: 5px;
 }
