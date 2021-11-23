@@ -1,9 +1,19 @@
-@import "resources/styles";
+@import 'resources/styles';
 
 .app {
+  z-index: 1;
+  position: relative;
   font-family: $f_MontR;
+  color: $c_Black;
+  overflow-x: hidden;
+}
+
+.background {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   background-color: $c_White;
-  color: $c_Black;
 }

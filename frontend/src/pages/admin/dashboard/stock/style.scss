@@ -1,0 +1,39 @@
+@import 'src/resources/styles';
+
+.all-inventory {
+  display: flex;
+  justify-content: center;
+}
+
+.all-inventory .content-flex {
+  width: 90%;
+  padding-top: 4%;
+}
+
+.all-inventory h2 {
+  font-size: 50px;
+}
+
+.all-inventory .flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.all-inventory .input-posting {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.all-inventory button {
+  background-color: $c_LightOrange; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: px;
+}

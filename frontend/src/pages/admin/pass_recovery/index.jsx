@@ -5,7 +5,7 @@ import Input from "../../../components/admin/input";
 import SubmitButton from "../../../components/admin/submit_button";
 import Logo from "../../../assets/images/logo.png";
 
-export default function Modal_pass_recovery () {
+export default function Recovery () {
     return(
         <div className={`password-recovery`}>
             <div className={`modal-pass-recovery container d-flex justify-content-around flex-column `}>
