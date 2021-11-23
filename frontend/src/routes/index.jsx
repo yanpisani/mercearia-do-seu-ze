@@ -6,6 +6,7 @@ import Layout from '../pages/admin/dashboard/';
 import Home from '../pages/admin/dashboard/home';
 import Stock from '../pages/admin/dashboard/stock';
 import Employees from '../pages/admin/dashboard/employees';
+import Sales from '../pages/admin/dashboard/sales';
 
 export default function Router() {
   return (
@@ -17,6 +18,7 @@ export default function Router() {
         <Route path="inicio" element={<Home />} />
         <Route path="estoque" element={<Stock />} />
         <Route path="funcionarios" element={<Employees />} />
+        <Route path="vendas" element={<Sales />} />
       </Route>
     </Routes>
   );

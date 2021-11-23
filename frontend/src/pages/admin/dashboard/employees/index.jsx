@@ -4,7 +4,7 @@ import TableComponent from '../../../../components/Table/index.jsx';
 import apiUser from '../../../../services/api/user';
 import InputMask from 'react-input-mask';
 
-export default function Stock() {
+export default function Employees() {
   const [productData, setUsersData] = useState({
     header: [],
     data: [],
