@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.scss';
 import TableComponent from '../../../../components/Table/index.jsx';
 import apiUser from '../../../../services/api/user';
+import InputMask from 'react-input-mask';
 
 export default function Stock() {
   const [productData, setUsersData] = useState({
@@ -146,93 +147,97 @@ export default function Stock() {
             <form>
               <div className="input-posting">
                 <label>Nome:</label>
-                <input
+                <InputMask
                   placeholder="Nome"
                   onChange={(event) => {
                     setName(event.target.value);
                   }}
                   value={name}
-                ></input>
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Endereço:</label>
-                <input
+                <InputMask
                   placeholder="Endereço"
                   onChange={(event) => {
                     setAddress(event.target.value);
                   }}
                   value={address}
-                ></input>
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Data de Nascimento:</label>
-                <input
+                <InputMask
                   placeholder="Data de Nascimento:"
                   onChange={(event) => {
                     setBirthDate(event.target.value);
                   }}
                   value={birthDate}
-                ></input>
+                  mask="9999-99-99"
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>CPF:</label>
-                <input
+                <InputMask
                   placeholder="CPF"
                   onChange={(event) => {
                     setCpf(event.target.value);
                   }}
                   value={cpf}
-                ></input>
+                  mask="999.999.999-99"
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Email:</label>
-                <input
+                <InputMask
                   placeholder="Email"
                   onChange={(event) => {
                     setEmail(event.target.value);
                   }}
                   value={email}
-                ></input>
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Telefone:</label>
-                <input
+                <InputMask
                   placeholder="Telefone"
                   onChange={(event) => {
                     setPhone(event.target.value);
                   }}
                   value={phone}
-                ></input>
+                  mask="(99)99999-9999"
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>RG:</label>
-                <input
+                <InputMask
                   placeholder="RG"
                   onChange={(event) => {
                     setRg(event.target.value);
                   }}
                   value={rg}
-                ></input>
+                  mask="99.999.999-9"
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Cargo/Função:</label>
-                <input
+                <InputMask
                   placeholder="Cargo/Função"
                   onChange={(event) => {
                     setRole(event.target.value);
                   }}
                   value={role}
-                ></input>
+                ></InputMask>
               </div>
               <div className="input-posting">
                 <label>Descrição do Cargo/Função:</label>
-                <input
+                <InputMask
                   placeholder="Descrição do Cargo/Função"
                   onChange={(event) => {
                     setRoleDescription(event.target.value);
                   }}
                   value={roleDecrtiption}
-                ></input>
+                ></InputMask>
               </div>
 
               <button
