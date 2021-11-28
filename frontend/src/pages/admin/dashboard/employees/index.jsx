@@ -58,9 +58,6 @@ export default function Employees() {
       password: '123456',
     };
 
-    console.log('data', data);
-    alert('clicou em post users');
-
     await apiUser.postUser(data);
     getUsers();
     setLoading(false);
