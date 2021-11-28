@@ -1,9 +1,9 @@
-@import "src/resources/styles";
+@import 'src/resources/styles';
 
 .login {
   width: 100vw;
   height: 100vh;
-  background-color: $c_White;
+  background-color: #f0f0f0;
 
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   .modal-login {
     width: 500px;
     height: 600px;
-    background-color: $c_White;
+    background-color: #f7f7f7;
     box-shadow: $s_Shadow;
     border-radius: $s_Radius;
   }
