@@ -213,8 +213,8 @@ export default function Stock() {
               <button
                 type="submit"
                 onClick={() => {
-                  if (!isEditing) postProduct();
-                  else putProduct();
+                  if (isEditing) putProduct();
+                  else postProduct();
                 }}
               >
                 Adicionar

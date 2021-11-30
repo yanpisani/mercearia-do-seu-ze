@@ -240,8 +240,8 @@ export default function Employees() {
               <button
                 type="submit"
                 onClick={() => {
-                  if (!isEditing) postUser();
-                  else putUser();
+                  if (isEditing) putUser();
+                  else postUser();
                 }}
               >
                 Adicionar
