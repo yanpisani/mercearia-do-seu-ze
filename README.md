@@ -72,4 +72,8 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
+# Regras de commit
 
+1. Evitar escrever muito, seja direto (máximo 50 caracteres)
+2. Utilizar verbos no imperativo (atualizado, alterado, adicionado, etc.)
+3. Não utilizar pontos finais
