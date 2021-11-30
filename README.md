@@ -24,8 +24,8 @@ O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a g
 > Versão 3.12.4
 
 # Banco de Dados:
-- PostgreSQL
-> Versão 14.0
+- SQLite
+> Versão 3.37.0 
 
 # Rodando o front-end
 
