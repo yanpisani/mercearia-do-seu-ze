@@ -2,7 +2,10 @@
 
 .card-home {
   margin-bottom: 20px;
-  background-color: $c_White;
+  margin-right: 40px;
+  background-color: #f6f6f6;
+  width: 250px;
+  border-radius: 5px;
 
   .card-title {
     color: $c_Black;
@@ -13,9 +16,14 @@
     color: $c_Black;
   }
   .card-button {
+    width: inherit;
     background-color: $c_LightOrange;
     color: $c_White;
     height: 70px;
     font-size: 20px;
+    text-decoration: none;
+  }
+  .card-button:hover {
+    background-color: #fd6a45;
   }
 }
