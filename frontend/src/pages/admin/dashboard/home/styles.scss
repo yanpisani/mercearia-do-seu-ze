@@ -7,12 +7,21 @@
 }
 
 .admin-home h1 {
+  width: 90%;
   position: relative;
-  left: 130px;
+
   font-size: 50px;
 }
 
 .admin-card {
+  display: flex;
   position: relative;
   top: 50px;
+  width: 90%;
+}
+
+.admin-home .flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
