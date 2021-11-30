@@ -72,8 +72,26 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-# Regras de commit
+# Regras de uso do Git
+#### Regras de commit
 
 1. Evitar escrever muito, seja direto (máximo 50 caracteres)
 2. Utilizar verbos no imperativo (atualizado, alterado, adicionado, etc.)
 3. Não utilizar pontos finais
+
+#### Definições de pastas
+
+- Documentação está localizada nas pastas:
+  - Diagramas
+  - Padrões Adotados
+  - Requisitos
+- Codificação está localizada nas pastas:
+  - back-end
+  - frontend
+
+#### Uso de branches
+
+- Caso haja alteração na documentação, alterar diretamente na main.
+- Caso haja alteração no código, utilize uma branch separada. 
+- Não realizar merge da branch para a main sem que o código esteja funcional ou ser apenas um teste. 
+
