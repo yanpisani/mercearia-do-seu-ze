@@ -59,7 +59,7 @@ export default function Sales() {
     getSales();
     setLoading(false);
   }
-  async function putSales() {
+  async function putSale() {
     setLoading(true);
     let data = {
       products: products,
@@ -142,8 +142,8 @@ export default function Sales() {
               <button
                 type="submit"
                 onClick={() => {
-                  if (!isEditing) postSale();
-                  else putSales();
+                  if (isEditing) putSale();
+                  else postSale();
                 }}
               >
                 Adicionar
