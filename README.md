@@ -81,13 +81,21 @@ python3 manage.py runserver
 
 #### Definições de pastas
 
-- Documentação está localizada nas pastas:
+As pastas estão definidas e distribuidas da seguinte maneira:
+- docs
   - Diagramas
-  - Padrões Adotados
+    - Diagramas de Classe
+    - Diagramas de Implantacao
+    - Diagramas de Sequencia
+ 
+  - Padroes Adotados
+
   - Requisitos
-- Codificação está localizada nas pastas:
-  - back-end
+
+- code
   - frontend
+ 
+  - backend
 
 #### Uso de branches
 
