@@ -93,5 +93,5 @@ python3 manage.py runserver
 
 - Caso haja alteração na documentação, alterar diretamente na main.
 - Caso haja alteração no código, utilize uma branch separada. 
-- Não realizar merge da branch para a main sem que o código esteja funcional ou ser apenas um teste. 
+- **Não realizar merge da branch para a main sem que o código esteja funcional ou ser apenas um teste.** 
 
