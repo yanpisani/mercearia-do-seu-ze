@@ -16,7 +16,7 @@ export default function Home() {
     },
     {
       section: 'Vendas',
-      link: '/admin/vendas',
+      link: '/admin/sales',
       icon: 'ri-shopping-cart-line',
     },
   ];
