@@ -56,9 +56,8 @@ export default function Stock() {
       cost_value: costValue,
       sale_value: saleValue,
     };
-
     await apiProduct.postProduct(data);
-    getProducts();
+    // getProducts();
     setLoading(false);
   }
 
