@@ -24,8 +24,8 @@ O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a g
 > Versão 3.12.4
 
 # Banco de Dados:
-- PostgreSQL
-> Versão 14.0
+- SQLite
+> Versão 3.37.0 
 
 # Rodando o front-end
 
@@ -72,4 +72,34 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
+# Regras de uso do Git
+#### Regras de commit
+
+1. Evitar escrever muito, seja direto (máximo 50 caracteres)
+2. Utilizar verbos no imperativo (atualizado, alterado, adicionado, etc.)
+3. Não utilizar pontos finais
+
+#### Definições de pastas
+
+As pastas estão definidas e distribuidas da seguinte maneira:
+- docs
+  - Diagramas
+    - Diagramas de Classe
+    - Diagramas de Implantacao
+    - Diagramas de Sequencia
+ 
+  - Padroes Adotados
+
+  - Requisitos
+
+- code
+  - frontend
+ 
+  - backend
+
+#### Uso de branches
+
+- Caso haja alteração na documentação, alterar diretamente na main.
+- Caso haja alteração no código, utilize uma branch separada. 
+- **Não realizar merge da branch para a main sem que o código esteja funcional ou ser apenas um teste.** 
 
