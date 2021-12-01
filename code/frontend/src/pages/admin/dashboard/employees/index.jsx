@@ -59,7 +59,7 @@ export default function Employees() {
     };
 
     await apiUser.postUser(data);
-    getUsers();
+    // getUsers();
     setLoading(false);
   }
 

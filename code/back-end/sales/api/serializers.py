@@ -4,4 +4,4 @@ from sales.models import Sale
 class SaleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Sale
-        fields = ('id', 'url', 'products', 'cost_total', 'timestamp')
+        fields = ('id', 'url', 'responsable', 'products', 'cost_total', 'timestamp')

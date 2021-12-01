@@ -21,6 +21,10 @@
     color: $c_White;
     height: 70px;
     font-size: 20px;
+    text-decoration: none;
+  }
+  .card-button:hover {
+    background-color: #fd6a45;
   }
   .card-button:hover {
     background-color: #fd6a45;

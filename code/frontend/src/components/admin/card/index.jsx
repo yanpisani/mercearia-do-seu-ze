@@ -9,7 +9,7 @@ export default function Card(props) {
         <div
           className={`col d-flex justify-content-center align-items-center card-title`}
         >
-          {props.section}
+          <b>{props.section}</b>
         </div>
       </div>
       <div className={`row`}>
