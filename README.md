@@ -32,7 +32,7 @@ O trabalho consiste na criação de um sistema que tem o objetivo de auxliar a g
 1. Garanta que você está na pasta front-end:
 
 ```sh
-cd ./frontend
+cd ./code/frontend
 ```
 
 2. Instale as depedências do javascript:
