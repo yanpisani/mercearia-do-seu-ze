@@ -103,3 +103,5 @@ As pastas estão definidas e distribuidas da seguinte maneira:
 - Caso haja alteração no código, utilize uma branch separada. 
 - **Não realizar merge da branch para a main sem que o código esteja funcional ou ser apenas um teste.** 
 
+#### Gitignore
+- Gitignore está localizado na pasta code/frontend.
